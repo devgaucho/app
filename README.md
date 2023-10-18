@@ -1,30 +1,21 @@
-# Env
+# App
 
-Registers environment variables from a .env file (only 40 lines of code!)
+Autoload de funções anônimas
 
-## Installation
+## Instalação
 
 ```bash
-composer require gaucho/env
+composer require gaucho/app
 ```
 
-## .env format (RAW)
-
-```
-#COMMENT
-VAR=foo
-```
-
-## Use
+## Como usar
 
 ```php
 <?php
 require 'vendor/autoload.php';
 
-use gaucho\Env;
+use gaucho\app;
 
-$env_filename=__DIR__.'/.env';
-
-new Env($env_filename);
-print $_ENV['VAR'];//output: foo
+$app=new app(__DIR__.'/src);
+$app->nomeDaFuncao();
 ```
