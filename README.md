@@ -16,6 +16,6 @@ require 'vendor/autoload.php';
 
 use gaucho\app;
 
-$app=new app(__DIR__.'/src);
+$app=new app(__DIR__.'/app);
 $app->nomeDaFuncao();
 ```
