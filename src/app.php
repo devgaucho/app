@@ -25,7 +25,7 @@ class app{
 	function __construct($root){
 		$this->root=$root;
 	}
-	function fn($name,...$arguments){
+	function fn($fn,...$arguments){
 		return $this->__call($fn,$arguments);
 	}
 	function method($raw = false) {
