@@ -224,6 +224,11 @@ class app{
 			error_reporting(0);
 		}
 	}
+	function static_get(){
+		$seg=$this->segment();
+		$assetName=$seg[3].'/'.$seg['4'];
+		$this->asset($assetName,true);
+	}
 	function url(){
 		$data=[
 			'protocol'=>$_SERVER['REQUEST_SCHEME'],
