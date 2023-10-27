@@ -34,9 +34,9 @@ class app{
 			return $method;
 		} else {
 			if ($method == 'POST') {
-				return 'post';
+				return 'POST';
 			} else {
-				return 'get';
+				return 'GET';
 			}
 		}
 	}	
