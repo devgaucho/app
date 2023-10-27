@@ -31,7 +31,7 @@ class app{
 	function method($raw = false) {
 		$method = $_SERVER['REQUEST_METHOD'];
 		if ($raw) {
-			return strtolower($method);
+			return $method;
 		} else {
 			if ($method == 'POST') {
 				return 'post';
