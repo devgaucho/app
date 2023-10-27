@@ -4,6 +4,9 @@ class app{
 	var $cache;
 	var $root;	
 	function __call($fn,$arguments) {
+		if($fn=='static'){
+			return $this->static();
+		}
 		$name=str_replace('_','/',$fn);
 		$arr=explode('/',$name);
 		$fn=end($arr);
@@ -224,7 +227,7 @@ class app{
 			error_reporting(0);
 		}
 	}
-	function static_get(){
+	function static(){
 		$seg=$this->segment();
 		$assetName=$seg[3].'/'.$seg['4'];
 		$this->asset($assetName,true);
