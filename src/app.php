@@ -143,12 +143,12 @@ class app{
 			];
 			$opts=[
 				'entity_flags' => ENT_QUOTES,
-				'loader' => new Mustache_Loader_FilesystemLoader(
+				'loader' => new \Mustache_Loader_FilesystemLoader(
 					$viewsPath,
 					$optsFile
 				),
 			];
-			$m = new Mustache_Engine($opts);
+			$m = new \Mustache_Engine($opts);
 			echo $m->render($name,$params);	
 		}else{
 			$msg='view <b>'.$filename.'</b> not found';
